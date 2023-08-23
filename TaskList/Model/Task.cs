@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace TaskList.Model
 {
-    internal class Task
+    /// <summary>
+    /// class for Task objects, with id, name, description, and completed status.
+    /// </summary>
+    public class Task
     {
-        private int TaskID (Get; Set;);
-        private int TaskListID (Get; Set;);
-        private string TaskName (Get; Set;);
-        private string TaskDescription (Get; Set;);
-        private bool Complete (Get; Set;);
+        public int TaskID { get; set; }
+        public int TaskListID { get; set; }
+        public string TaskName { get; set; }
+        public string TaskDescription { get; set; }
+        public bool Complete { get; set; }
     }
 }

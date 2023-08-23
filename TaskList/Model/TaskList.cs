@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace TaskList.Model
 {
-    internal class TaskList
+    /// <summary>
+    /// class for TaskList objects, a list id, list of tasks, and the name of the list
+    /// </summary>
+    public class TaskList
     {
-        private int TaskListID (Get; Set;);
-        private List<Task> TaskList (Get; Set;);
-        private String TaskListName (Get; Set;);
+        private int TaskListID { get; set; }
+        private List<Task> TaskList { get; set; }
+        private String TaskListName { get; set; }
     }
 }
