@@ -11,8 +11,7 @@ namespace TaskList.Model
     /// </summary>
     public class TaskList
     {
-        private int TaskListID { get; set; }
-        private List<Task> TaskList { get; set; }
-        private String TaskListName { get; set; }
+        public int TaskListID { get; set; }
+        public String TaskListName { get; set; }
     }
 }
