@@ -20,5 +20,15 @@ namespace TaskList.Controller
         {
             return this._taskListDAL.GetTaskLists();
         }
+
+        /// <summary>
+        /// method creating a new TaskList in the database, returns true or false depending on success
+        /// </summary>
+        /// <param name="taskListName"></param>
+        /// <returns></returns>
+        public bool CreateTaskList(string taskListName)
+        {
+            return this._taskListDAL.CreateTaskList(taskListName);
+        }
     }
 }

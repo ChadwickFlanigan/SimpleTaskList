@@ -35,5 +35,30 @@ namespace TaskList.DALs
             }
             return taskLists;
         }
+
+        /// <summary>
+        /// method creating a new TaskList in the database, returns true or false depending on success
+        /// </summary>
+        /// <param name="taskListName"></param>
+        /// <returns></returns>
+        public bool CreateTaskList(string taskListName)
+        {
+            using (SqlConnection connection = TaskListConnectionString.GetConnection())
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO TaskList(ListName) VALUES(@listName);", connection);
+                command.Parameters.AddWithValue("@listName", taskListName);
+                connection.Open();
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

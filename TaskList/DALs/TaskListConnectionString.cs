@@ -11,7 +11,7 @@ namespace TaskList.DALs
     {
         public static SqlConnection GetConnection()
         {
-            return new SqlConnection("Data Source=localhost;Initial Catalog=SimpleTaskList;Integrated Security=True;");
+            return new SqlConnection("Data Source=localhost;Initial Catalog=SimpleTaskList;Integrated Security=True;TrustServerCertificate=true");
         }
     }
 }
